@@ -44,6 +44,12 @@
 	<profiles>
         <profile>
             <id>app</id>
+            <activation>
+                <property>
+                    <name>environment</name>
+                    <value>cicd</value>
+                </property>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
@@ -125,7 +131,13 @@
             </build>
         </profile>
 		<profile>
-			<id>quality</id>
+            <id>quality</id>
+            <activation>
+                <property>
+                    <name>environment</name>
+                    <value>cicd</value>
+                </property>
+            </activation>
 			<build>
 				<plugins>
 					<plugin>
@@ -193,7 +205,13 @@
 			</build>
 		</profile>
 		<profile>
-			<id>failsafe</id>
+            <id>failsafe</id>
+            <activation>
+                <property>
+                    <name>environment</name>
+                    <value>cicd</value>
+                </property>
+            </activation>
 			<build>
 				<plugins>
 					<plugin>
